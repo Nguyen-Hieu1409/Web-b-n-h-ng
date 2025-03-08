@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./css/style.css">
+ 
+ <title><?php echo $this->yieldContent('title'); ?></title>
+</head>
+<body>
+ <div class="container">
+ <header>
+ <div class="menu-left">
+ <ul>
+ <li><a href="http://localhost/php2_wd19306/lab2/">Trang Chủ</a></li>
+ <li><a href="http://localhost/php2_wd19306/lab2/sanpham">Sản Phẩm</a></li>
+ <li><a href="http://localhost/php2_wd19306/lab2/gioithieu">Giới Thiệu</a></li>
+ <li><a href="http://localhost/php2_wd19306/lab2/lienhe">Liên Hệ</a></li>
+ <li><a href="http://localhost/php2_wd19306/lab2/chitiet">Chi tiết</a></li>
+ 
+ </ul>
+ </div>
+ <div class="menu-right">
+ <ul>
+ <li><a href="http://localhost/php2_wd19306/lab2/admin">Admin</a></li>
+ <li><a href="http://localhost/php2_wd19306/lab2/dangky">Đăng Ký</a></li>
+ <li><a href="http://localhost/php2_wd19306/lab2/dangnhap">Đăng Nhập</a></li>
+ </ul>
+ </div>
+ </header>
+ 
+ <?php echo $this->yieldContent('content'); ?>
+ <footer>HiếunnPh51707</footer>
+ </div>
+</body>
+</html>

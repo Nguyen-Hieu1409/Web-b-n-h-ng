@@ -1,0 +1,82 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('title'); ?>
+ Sản Phẩm
+<?php $this->stopSection(); ?>
+<?php $this->startSection('content'); ?>
+<div class="contaier"> 
+ 
+ <img src="./images/abn2.png" alt="" style="margin: 10px 0 0 ">
+ 
+ <h1>Danh sách sản Phẩm</h1>
+ 
+ <h2>Đồng hồ nam hot</h2>
+ <div class="sanpham">
+ <div class="sp1">
+ <img src="./images/anam1.png" alt="">
+ <p>Casio 780</p>
+ <p>150$</p>
+ <button>Mua Ngay</button>
+ </div>
+ <div class="sp2">
+ <img src="./images/anam2.png" alt="">
+ <p>Casio 190</p>
+ <p>150$</p>
+ <button>Mua Ngay</button>
+ </div>
+ <div class="sp3">
+ <img src="./images/anam3.png" alt="">
+ <p>Cơ điện tử</p>
+ <p>$600</p>
+ <button>Mua Ngay</button>
+ </div>
+ </div>
+ <h2>Đồng hồ nữ hot</h2>
+ <?php /* 2 */ ?>
+ <div class="sanpham">
+ <div class="sp1">
+ <img src="./images/anam4.png" alt="">
+ <p>Casio 780</p>
+ <p>150$</p>
+ <button>Mua Ngay</button>
+ </div>
+ <div class="sp2">
+ <img src="./images/anam5.png" alt="">
+ <p>Casio 190</p>
+ <p>150$</p>
+ <button>Mua Ngay</button>
+ </div>
+ <div class="sp3">
+ <img src="./images/anam6.png" alt="">
+ <p>Cơ điện tử</p>
+ <p>$600</p>
+ <button>Mua Ngay</button>
+ </div>
+
+ </div>
+ <h2>đồng hồ bán chạy</h2>
+ <div class="sanpham">
+ <div class="sp1">
+ <img src="./images/anu1.png" alt="">
+ <p>Thụy Sĩ</p>
+ <p>150$</p>
+ <button>Mua Ngay</button>
+ </div>
+ <div class="sp2">
+ <img src="./images/anu2.png" alt="">
+ <p>Máy Cơ</p>
+ <p>150$</p>
+ <button>Mua Ngay</button>
+ </div>
+ <div class="sp3">
+ <img src="./images/anu3.png" alt="">
+ <p>Đồng hồ pháp</p>
+ <p>$600</p>
+ <button>Mua Ngay</button>
+ </div>
+
+ </div>
+ 
+</div>
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

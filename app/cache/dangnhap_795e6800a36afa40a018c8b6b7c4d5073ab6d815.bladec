@@ -1,0 +1,17 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('content'); ?>
+ <h1>Đăng nhập</h1>
+ <div class="login-form">
+ <p>Vui lòng nhập thông tin tài khoản để đăng nhập.</p>
+ 
+ <form action="#" method="POST">
+ <input type="email" name="email" placeholder="Email" required>
+ <input type="password" name="password" placeholder="Mật khẩu" required>
+ <button type="submit" class="login-btn">Đăng nhập</button>
+ </form>
+
+ <p>Chưa có tài khoản? <a href="/signup">Đăng ký tại đây</a></p>
+ </div>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

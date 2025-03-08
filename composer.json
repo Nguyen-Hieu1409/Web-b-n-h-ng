@@ -1,0 +1,19 @@
+{
+    "name": "ngochieu/bai2",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Nguyen Ngoc Hieu",
+            "email": "hieunnph51707@gmail.com"
+        }
+    ],
+    "require": {
+        "phroute/phroute": "^2.2",
+        "eftec/bladeone": "^4.17"
+    },
+    "autoload": {
+         "psr-4": {
+            "App\\":"app/"
+         }
+    }
+}

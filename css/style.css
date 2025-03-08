@@ -1,0 +1,430 @@
+/* Đặt các kiểu chung cho toàn trang */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Kiểu dáng cho container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Kiểu dáng cho header */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Chia 2 phần: trái và phải */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #383030;
+    /* Màu nền cho menu */
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    /* Xóa dấu chấm của danh sách */
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: #00bcd4;
+    /* Màu chữ khi rê chuột */
+}
+
+
+.menu-right ul {
+    /* Canh phải menu */
+    justify-content: flex-end;
+}
+
+
+/* Kiểu dáng cho phần nội dung động */
+
+
+
+/* Kiểu dáng cho footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(26, 24, 24);
+    color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+
+/* Css sản phẩm */
+.sanpham {
+    display: flex;
+    /* Kích hoạt Flexbox */
+    justify-content: space-between;
+    /* Khoảng cách đều giữa các sản phẩm */
+    align-items: center;
+    /* Canh giữa theo chiều dọc */
+    gap: 20px;
+    /* Khoảng cách giữa các sản phẩm */
+    margin: 20px;
+}
+
+.sanpham div {
+    text-align: center;
+    /* Canh giữa nội dung bên trong sản phẩm */
+    border: 1px solid #ddd;
+    /* Viền cho sản phẩm */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Tạo bóng */
+    width: 30%;
+    /* Chiều rộng mỗi sản phẩm (có thể chỉnh tùy ý) */
+}
+
+.sanpham img {
+    width: 100%;
+    /* Hình ảnh chiếm hết chiều rộng container */
+    height: auto;
+}
+h2{
+    text-align: center;
+    color: red;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*end Css sản phẩm */
+
+/*Css Giới thiệu */
+/* CSS for 'Giới thiệu' section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-content h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.about-content strong {
+    color: #007bff;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/*end Css Giới thiệu */
+/* css liên hệ  */
+/* CSS for 'Liên hệ' section */
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.contact-info h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-btn:hover {
+    background-color: #0056b3;
+}
+/* end css liên hệ */
+/* css đăng ký */
+/* CSS for 'Đăng ký' section */
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.signup-form h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.signup-form p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.signup-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.signup-form button.signup-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button.signup-btn:hover {
+    background-color: #0056b3;
+}
+
+.signup-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-form a:hover {
+    text-decoration: underline;
+}
+
+/* end css đk */
+/* css đăng nhập */
+/* CSS for 'Đăng nhập' section */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.login-form h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.login-form p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.login-form button.login-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/* end css đăng nhập */
+/* css chi tiết */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .product {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image img {
+    max-width: 250px;
+    border-radius: 8px;
+  }
+  
+  .product-details {
+    margin-left: 20px;
+    flex: 1;
+  }
+  
+  .product-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    color: #e63946;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .product-specifications {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-specifications li {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+  
+  .buy-now {
+    background: #1d3557;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .buy-now:hover {
+    background: #457b9d;
+  }
+  
+/* end css chi tiết */
+/* css admin */
+
+
+
+
+/* end css admin */

@@ -1,0 +1,25 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('content'); ?>
+<div class="product">
+ <div class="product-image">
+ <img src="./images/anu1.png" alt="Đồng hồ ChronoMaster Sapphire Steel">
+ </div>
+ <div class="product-details">
+ <h2 class="product-title">Đồng hồ nam ChronoMaster Sapphire Steel</h2>
+ <p class="product-price">4,500,000 VND</p>
+ <p class="product-description">
+ Một sản phẩm kết hợp hoàn hảo giữa thiết kế cổ điển và hiện đại, đồng hồ ChronoMaster Sapphire Steel là lựa chọn lý tưởng cho quý ông yêu thích sự thanh lịch và sang trọng.
+ </p>
+ <ul class="product-specifications">
+ <li><strong>Thương hiệu:</strong> ChronoMaster</li>
+ <li><strong>Chất liệu vỏ:</strong> Thép không gỉ 316L</li>
+ <li><strong>Kích thước mặt:</strong> 42mm</li>
+ <li><strong>Loại kính:</strong> Kính Sapphire chống xước</li>
+ <li><strong>Chống nước:</strong> 5 ATM</li>
+ </ul>
+ <button class="buy-now">Mua ngay</button>
+ </div>
+ </div>
+ 
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

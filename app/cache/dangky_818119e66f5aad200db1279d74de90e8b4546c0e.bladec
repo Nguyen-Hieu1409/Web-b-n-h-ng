@@ -1,0 +1,19 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('content'); ?>
+ <h1>Đăng ký tài khoản</h1>
+ <div class="signup-form">
+ <p>Hãy điền thông tin vào biểu mẫu dưới đây để tạo tài khoản mới.</p>
+ 
+ <form action="#" method="POST">
+ <input type="text" name="name" placeholder="Tên người dùng" >
+ <input type="email" name="email" placeholder="Email" >
+ <input type="password" name="password" placeholder="Mật khẩu" >
+ <button type="submit" class="signup-btn">Đăng ký</button>
+ </form>
+
+ <p>Đã có tài khoản? <a href="#">Đăng nhập tại đây</a></p>
+ </div>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

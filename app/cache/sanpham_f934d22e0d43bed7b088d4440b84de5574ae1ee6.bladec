@@ -1,0 +1,129 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('title'); ?>
+ Sản Phẩm
+<?php $this->stopSection(); ?>
+<?php $this->startSection('content'); ?>
+<div class="contaier"> 
+ 
+ <img src="./image/abn2.png" alt="" style="margin: 10px 0 0 ">
+ 
+ <h1>Danh sách sản Phẩm</h1>
+ <div class="danhmuc">
+ 
+ <label for="" class="form-label"></label>
+ 
+ <?php $__currentLoopData = $categories; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $cate): $loop = $this->incrementLoopIndices();  ?>
+ <div class="in-sidebar">
+ <a href="<?php echo \htmlentities(APP_URL . 'sanpham/danhmuc/' . $cate->id??'', ENT_QUOTES, 'UTF-8', false); ?>">
+ <div class="name"><button class="btn btn-primary"><?php echo \htmlentities($cate->ten_dm??'', ENT_QUOTES, 'UTF-8', false); ?></button></div>
+ </a>
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ 
+ </div>
+ <h2>Danh sách</h2>
+ <div class="sanpham">
+ <?php $__currentLoopData = $products; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $product): $loop = $this->incrementLoopIndices();  ?>
+ <div class="sp1">
+ <p>
+ <img src="<?php echo \htmlentities(APP_URL . $product->anh??'', ENT_QUOTES, 'UTF-8', false); ?>" alt="" >
+ </p>
+ <p><?php echo \htmlentities($product->ten??'', ENT_QUOTES, 'UTF-8', false); ?></p>
+ <p><?php echo \htmlentities($product->gia??'', ENT_QUOTES, 'UTF-8', false); ?> $</p>
+ <a href="<?php echo \htmlentities(APP_URL . 'sanpham/' . $product->id??'', ENT_QUOTES, 'UTF-8', false); ?>"><button>Mua Ngay</button></a>
+ 
+ 
+ </div>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </div>
+ 
+ 
+ 
+</div>
+<style>
+ .danhmuc {
+ display: flex;
+ flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+ gap: 10px; /* Khoảng cách giữa các danh mục */
+ margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.in-sidebar {
+ display: inline-block;
+}
+
+.in-sidebar a {
+ text-decoration: none; /* Xóa gạch chân */
+}
+
+.in-sidebar .btn {
+ background-color: #007bff;
+ color: white;
+ padding: 8px 15px;
+ border-radius: 5px;
+ border: none;
+ cursor: pointer;
+}
+
+.in-sidebar .btn:hover {
+ background-color: #0056b3;
+}
+
+ .sanpham {
+ display: flex;
+ flex-wrap: wrap; /* Cho phép các sản phẩm xuống dòng khi không đủ không gian */
+ justify-content: space-between; /* Canh đều khoảng cách giữa các sản phẩm */
+ gap: 20px; /* Tạo khoảng cách giữa các sản phẩm */
+}
+
+.sp1 {
+ width: calc(33.333% - 20px); /* Chia thành 3 cột, trừ khoảng cách giữa các sản phẩm */
+ background: white;
+ padding: 15px;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ text-align: center;
+}
+
+.sp1 img {
+ width: 100%;
+ max-height: 500px; /* Định kích thước tối đa cho ảnh */
+ object-fit: cover; /* Cắt ảnh nếu vượt kích thước */
+}
+
+.sp1 button {
+ background-color: #ff6600;
+ color: white;
+ border: none;
+ padding: 10px 15px;
+ margin-top: 10px;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.sp1 button:hover {
+ background-color: #e65c00;
+}
+
+/* Đảm bảo sản phẩm hiển thị tốt trên thiết bị nhỏ hơn */
+@media (max-width: 1024px) {
+ .sp1 {
+ width: calc(50% - 20px); /* 2 cột trên màn hình nhỏ hơn */
+ }
+}
+
+@media (max-width: 600px) {
+ .sp1 {
+ width: 100%; /* 1 cột trên điện thoại */
+ }
+}
+.sp1 p:last-of-type {
+ color: #ff0000; /* Màu đỏ cho giá */
+ font-weight: bold;
+}
+</style>
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

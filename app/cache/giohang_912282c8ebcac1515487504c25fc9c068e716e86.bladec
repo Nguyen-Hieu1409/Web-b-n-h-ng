@@ -1,0 +1,68 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title', 'Giỏ Hàng'); ?>
+
+ <style>
+/* Điều chỉnh kích thước ảnh trong bảng */
+.cart-table img {
+ width: 120px; /* Thay đổi giá trị này để điều chỉnh kích thước ảnh */
+ height: auto; /* Giữ tỷ lệ khung hình của ảnh */
+}
+
+/* Thay đổi màu sắc của nút */
+.remove-btn {
+ background-color: #ff4d4d; /* Màu nền đỏ */
+ color: white; /* Màu chữ trắng */
+ border: none; /* Bỏ viền */
+ padding: 5px 10px; /* Khoảng cách bên trong nút */
+ cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột lên nút */
+ border-radius: 5px; /* Bo góc nút */
+ transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi di chuột */
+}
+
+.remove-btn:hover {
+ background-color: #ff1a1a; /* Màu nền đỏ đậm hơn khi di chuột */
+}
+
+ </style>
+
+
+<?php $this->startSection('content'); ?>
+ <h2>Giỏ Hàng</h2>
+ <table class="cart-table">
+ <thead>
+ <tr>
+ <th>Ảnh</th>
+ <th>Tên Sản Phẩm</th>
+ <th>Giá</th>
+ <th>Số Lượng</th>
+ <th>Tổng</th>
+ <th>Hành Động</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><img  src="./images/anam1.png" alt="Đồng Hồ Casio"></td>
+ <td>Đồng Hồ Casio</td>
+ <td>1,500,000 VND</td>
+ <td>1</td>
+ <td>1,500,000 VND</td>
+ <td><button class="remove-btn">Xóa</button></td>
+ </tr>
+ <tr>
+ <td><img  src="./images/anam2.png" alt="Đồng Hồ Rolex"></td>
+ <td>Đồng Hồ Rolex</td>
+ <td>50,000,000 VND</td>
+ <td>1</td>
+ <td>50,000,000 VND</td>
+ <td><button class="remove-btn">Xóa</button></td>
+ </tr>
+ </tbody>
+ </table>
+ <div class="cart-summary">
+ <p><strong>Tổng Tiền:</strong> 51,500,000 VND</p>
+ <button class="checkout-btn">Thanh Toán</button>
+ </div>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

@@ -1,0 +1,144 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('content'); ?>
+<div class="admin-dashboard">
+ <h1>Admin Dashboard</h1>
+ <div class="container">
+ <p>Welcome to the admin panel. Manage your website here.</p>
+ <div class="stats">
+ <div class="stat-card">
+ <h3>Manage Users</h3>
+ <p>View and manage all users.</p>
+ <a href="#">Go to Users</a>
+ </div>
+ <div class="stat-card">
+ <h3>Manage Products</h3>
+ <p>View and manage all products.</p>
+ <a href="#">Go to Products</a>
+ </div>
+ <div class="stat-card">
+ <h3>Manage Orders</h3>
+ <p>View and manage all orders.</p>
+ <a href="#">Go to Orders</a>
+ </div>
+ </div>
+ </div>
+</div>
+ <style>
+ /* Kiểu dáng cho container */
+ body {
+ margin: 0;
+ padding: 0;
+ font-family: Arial, sans-serif;
+ background-color: #f9f9f9;
+ color: #333;
+}
+ .stats {
+ display: flex;
+ justify-content: space-around;
+ gap: 20px;
+ }
+
+ .stat-card {
+ width: 30%;
+ background-color: #f9f9f9;
+ border-radius: 8px;
+ padding: 20px;
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ text-align: center;
+ }
+
+ .stat-card h3 {
+ color: #007bff;
+ font-size: 20px;
+ margin-bottom: 10px;
+ }
+
+ .stat-card p {
+ font-size: 14px;
+ color: #777;
+ margin-bottom: 15px;
+ }
+
+ .stat-card a {
+ text-decoration: none;
+ color: #007bff;
+ font-size: 16px;
+ font-weight: bold;
+ }
+
+ .stat-card a:hover {
+ color: #0056b3;
+ }
+.container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 20px;
+}
+.container img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ margin: 0 auto;
+}
+/* Kiểu dáng cho header */
+header {
+ display: flex;
+ justify-content: space-between;
+ /* Chia 2 phần: trái và phải */
+ align-items: center;
+ padding: 10px 20px;
+ background-color: #383030;
+ /* Màu nền cho menu */
+ color: #fff;
+}
+
+header ul {
+ display: flex;
+ list-style-type: none;
+ /* Xóa dấu chấm của danh sách */
+ padding: 0;
+ margin: 0;
+}
+
+header ul li {
+ margin: 0 10px;
+}
+
+header ul li a {
+ text-decoration: none;
+ color: #fff;
+ font-size: 16px;
+ transition: 0.3s;
+}
+
+header ul li a:hover {
+ color: #00bcd4;
+ /* Màu chữ khi rê chuột */
+}
+
+
+.menu-right ul {
+ /* Canh phải menu */
+ justify-content: flex-end;
+}
+
+
+/* Kiểu dáng cho phần nội dung động */
+
+
+
+/* Kiểu dáng cho footer */
+footer {
+ text-align: center;
+ padding: 10px 0;
+ background-color: red;
+ color: white;
+ margin-top: 20px;
+ border-radius: 8px;
+}
+
+ </style>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

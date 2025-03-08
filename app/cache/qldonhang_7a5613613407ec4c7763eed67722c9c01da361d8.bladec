@@ -1,0 +1,100 @@
+ <?php $_shouldextend[1]=1; ?>
+
+ <?php $this->startSection('title', 'Quản Lý đơn hàng'); ?>
+
+ <?php $this->startSection('content'); ?>
+ <h2>Quản Lý Đơn hàng</h2>
+ <table border="1" cellpadding="10" cellspacing="0">
+ <thead>
+ <tr>
+ <th>ID Đơn Hàng</th>
+ <th>Khách Hàng</th>
+ <th>Sản Phẩm</th>
+ <th>Tổng Tiền</th>
+ <th>Trạng Thái</th>
+ <th>Hành Động</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>101</td>
+ <td>Nguyễn Văn A</td>
+ <td>Đồng Hồ Casio</td>
+ <td>1,500,000 VND</td>
+ <td>Đang giao</td>
+ <td><button>Xem Chi Tiết</button> <button>Thay Đổi Trạng Thái</button></td>
+ </tr>
+ <tr>
+ <td>102</td>
+ <td>Trần Thị B</td>
+ <td>Đồng Hồ Rolex</td>
+ <td>50,000,000 VND</td>
+ <td>Hoàn thành</td>
+ <td><button>Xem Chi Tiết</button> <button>Thay Đổi Trạng Thái</button></td>
+ </tr>
+ </tbody>
+ </table>
+ <?php $this->stopSection(); ?>
+ <style>
+ h2 {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+
+table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 20px;
+}
+
+th, td {
+ padding: 10px;
+ text-align: left;
+ border: 1px solid #ddd;
+}
+
+th {
+ background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+ background-color: #f2f2f2;
+}
+
+button {
+ padding: 6px 12px;
+ margin: 0 5px;
+ font-size: 14px;
+ cursor: pointer;
+ border: none;
+ border-radius: 4px;
+}
+
+button:nth-child(1) {
+ background-color: #17a2b8; /* Màu cyan cho "Xem Chi Tiết" */
+ color: white;
+}
+
+button:nth-child(2) {
+ background-color: #ffc107; /* Màu vàng cho "Thay Đổi Trạng Thái" */
+ color: white;
+}
+
+button:hover {
+ opacity: 0.8;
+}
+
+a {
+ text-decoration: none;
+ font-size: 16px;
+ color: #007bff;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+ </style>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layoutadmin'); } ?>

@@ -1,0 +1,10 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ Giới Thiệu
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+ <h1>Giới thiệu</h1>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>
